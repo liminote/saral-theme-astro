@@ -52,7 +52,12 @@ html {
 	@apply grid my-6 md:grid-cols-2 xl:grid-cols-4 gap-6;
 }
 
-/* Post content */
-.prose iframe {
+ /* Post content */                                                            
+  .prose iframe {
+      @apply my-16 mx-auto w-11/12 aspect-video rounded-xl;                     
+  }               
+
+  h1 { color: red !important; }
+
 	@apply my-16 mx-auto w-11/12 aspect-video rounded-xl;
 }
