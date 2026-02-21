@@ -1,37 +1,39 @@
----
-import BaseHead from '../components/BaseHead.astro'
-import Navbar from '../components/Navbar.astro'
-import Footer from '../components/Footer.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+ ---
+  import BaseHead from '../components/BaseHead.astro'
+  import Navbar from '../components/Navbar.astro'
+  import Footer from '../components/Footer.astro'
+  import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 
-interface Props {
-	title?: string
-	description?: string
-}
+  interface Props {
+      title?: string
+      description?: string
+  }
 
-const { title, description } = Astro.props
+  const { title, description } = Astro.props
 
-import '@fontsource-variable/inter'
-import '@fontsource-variable/jetbrains-mono'
----
+  import '@fontsource-variable/inter'
+  import '@fontsource-variable/jetbrains-mono'
+  ---
 
-<!doctype html>
-<html lang="zh-Hant">
-	<head>
-		<BaseHead
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;60
-  0;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
-			title={title || SITE_TITLE}
-			description={description || SITE_DESCRIPTION}
-		/>
-	</head>
-	<body
-		class="text-foreground bg-background font-light dark:text-foreground-dark dark:bg-background-dark transition-colors"
-	>
-		<Navbar title={SITE_TITLE} />
-		<slot />
-		<Footer />
-	</body>
-</html>
+  <!doctype html>
+  <html lang="zh-Hant">
+      <head>
+          <BaseHead
+              title={title || SITE_TITLE}
+              description={description || SITE_DESCRIPTION}
+          />
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wgh
+  t@400;600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap"
+  rel="stylesheet">
+      </head>
+      <body
+          class="text-foreground bg-background font-light
+  dark:text-foreground-dark dark:bg-background-dark transition-colors"
+      >
+          <Navbar title={SITE_TITLE} />
+          <slot />
+          <Footer />
+      </body>
+  </html>
