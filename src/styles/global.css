@@ -15,7 +15,9 @@
       --color-primary: #4A7FA5;
       --color-primary-dark: #7AAFC7;
   }
-
+  h1, h2 {
+      font-family: var(--font-serif);
+  }
 
 html {
 	scroll-padding-top: 6.5rem;
