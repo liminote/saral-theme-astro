@@ -3,17 +3,19 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-	--font-sans: 'Inter Variable', sans-serif;
-	--font-mono: 'JetBrains Mono Variable', monospace;
+  @theme {
+      --font-sans: 'Noto Sans TC', 'Inter Variable', sans-serif;
+      --font-serif: 'Noto Serif TC', Georgia, serif;
+      --font-mono: 'JetBrains Mono Variable', monospace;
 
-	--color-foreground: #0c0c0c;
-	--color-foreground-dark: #fafafa;
-	--color-background: #ffffff;
-	--color-background-dark: #2b2b2b;
-	--color-primary: #0784b5;
-	--color-primary-dark: #9bd4e4;
-}
+      --color-foreground: #1E2D3D;
+      --color-foreground-dark: #E8EDF4;
+      --color-background: #F7F9FC;
+      --color-background-dark: #1A2432;
+      --color-primary: #4A7FA5;
+      --color-primary-dark: #7AAFC7;
+  }
+
 
 html {
 	scroll-padding-top: 6.5rem;
