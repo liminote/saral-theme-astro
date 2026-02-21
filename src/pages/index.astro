@@ -5,9 +5,9 @@
   import BlogCard from '../components/BlogCard.astro'
   import { getCollection } from 'astro:content'
 
-  const bio = '馬大文（Vanny Ma）。熟悉領域為藝文出版與數位網路，擅長營運規劃及
+  const bio = `馬大文（Vanny Ma）。熟悉領域為藝文出版與數位網路，擅長營運規劃及
   數據行銷分析。曾出版現場錄音專輯《我的我的夏天》，現經營
-  Podcast《如果只有你聽見》，持續學習成為一個不斷變化與流動的創作者。'
+  Podcast《如果只有你聽見》，持續學習成為一個不斷變化與流動的創作者。`
 
   const posts = (await getCollection('blog'))
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
